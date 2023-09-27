@@ -61,7 +61,7 @@
             <li>Computador e hardware de redes : componentes eletrÇonicos que permitem o funcionamento do equippamento utilizado</li></br>
             </ol>
 
-        <h3>Tipos de Sistemas Computacionais</h3>
+        <h3>C - Tipos de Sistemas Computacionais</h3>
 </br>
         <p>Se originaram em 1950 e foram evoluindo ao longo dos anos, inicialmente sendo centralizados e entçai evoluindo para paralelos</p>
         <p>Sistema centralizado possui um grande computador central, o mainframe, ao qual o usupario se ligava utilizando um terminal, uma linha de comunicação</p>
@@ -70,6 +70,51 @@
         <p> em paralelo, acontecia a evoolução do hardware dos processadores, surgindo assim o ssistmea paralelo</p>
         <p> o sistema paralelo é aquele em que possuo mais de um processador executando as atividades ao mesmo tempo, ou seja executando mais de um processamento paralelamente</p>
         <p>inicialmente era algo caro em que se colocava vários processadores em uma máquina e eles colaboravam um com o outro, sendo um sistem paralelo fortemente acoplado, pois a interligação entre os processadores se dava por meio de um barramento interno - o qual é altamente veloz</p>
+    
+        <h3>D - Sistemas Centralizados</h3>
+</br>
+        <p>Este é o tipo mais antigo, no qual há a figura de um grande computador central, o mainframe, que recebe e processa uma grande quantidade de informações</p>
+        <p>A mecâmica de seu funcionamento consiste em o usuário acessar o mainframe e realizar a sua solicitação. A servidor, por sua vez, processa a requisição, acessa os recursos necessários e produz o resultado</p>
+</br>
+        <h3>Sistemas Paralelos</h3>
+</br>
+        <p>Neste tipo de sistema, existem vários processamentos ocorrendo ao mesmo tempo para produzir os resultados solicitados</p></br>
+        <p>Este processamento simultâneo das várias partes de uma aplicação pode ser realizado das sequintes formas:</p>
+ </br>       
+        <ul>
+        <li>Em uma máquina com vários processadores</li></br>
+        <li>Em várias máquinas interligadas por uma rede de comunicação de dados se comportando como um único computador</li></br>
+        <li>Em uma máquina com um único processador com vários núcleos, como nas CPUs mais modernas</li></br>
+        </ul>
+</br>
+        <p>Em sistemas paralelos, uma aplicação que implica o upload de um arquivo pelo usuário pode ser dividida em duas partes processadas ao mesmo tempo, uma que faz a carga da imagem e outra que mostraá a barra de progresso do carregamento</p></br>
+        <p>Em comparação com sistemas centralizados, a arquitetura paralela é de gerenciamento mais difícil e necessita de implementação mais robusta em sua segurança</p></br>
+        <p>Os sistemas paralelos podem ser de dois tipos:</p></br>
+        <dl></br>
+            <dt>Sistemas paralelos fortemente acoplados</dt></br>
+                <dd>Um grande conjunto de sistemas computacionais corresponde a este tipo - qualquer tipo de computador equipado com mais de um processador ou, se tiver um único processador, que este possua em sua arquitetura mais de um núcleo</dd></br>
+                <dd>Um sistema paralelo fortemente acoplado corresponde, praticamente a todos os atuais equipamentos que utilizamos para realizar a execução de aplicativos</dd></br>
+                <dd>Em sistemas fortemente acoplado, a comunicação entre os processadores ocorre utilizando o barramento interno do equipamento e as várias CPUs/ núcleos compartilham a memória principal (conhecida popularmente como RAM) do equipamento</dd></br>
+                <dd>Como a arquitetura suporta vários processadores, ou núcleos, vários programas, ou partes diferentes de um mesmo programa, podem ser executados de forma simultânea</dd></br>
+            </br>
+            <dt>Sistemas Paralelos Fracamente Acoplados</dt></br>
+                <dd>Este tipo se aplica aos sistemas de maior escala, sempre conectados por rede de computadores. Ele é composto de máquinas distintas, podendo cada uma delas ser individualmente do tipo fortemente acoplada, que trabalham em conjunto, de forma coordenada, para realizar o processamento solicitado e produzir o resultado pretendido</dd></br>
+                <dd>Exemplos típicos de sistemas paralelos fracamente acoplados:</dd>
+                    <dl>
+                        <dt>Arquitetura cliente servidor</dt>
+                            <dd>Essa é a arquitetura de rede mais conhecida e utilizada nos sistemas informatizados. Nela está presente a figura do computador que fornece os serviços, denominado servidor, e do computador que demanda o uso do serviço, denominado cliente</dd>
+                        <dt>Arquitetura Ponto a Ponto</dt>
+                            <dd>Também conhecida como arquitetura peer-to-peer, ou simplesmente, p2p, tem como característica o fato de não existir a figura do servidor e do cliente de forma marcada. Todas as máquinas da rede podem eventualmente fornecer um serviço ou demandar o serviço oferecido por outra máquina</dd>
+                    </dl>
+                <dd>Em relação aos sistemas fortemente acoplados, os fracamente acoplados possuem algumas vantagens e desvantagens</dd>
+                    <ul>
+                        <li>Vantagem: A flexibilidade e a escalabilidade, sendo muito mais simples acrescentar mais poder computacional, pois basta realizar o acréscimo de novas máquinas</li>
+                        <li>Desvantagem: A velocidade de transferência de dados entre os processadores é muito menor, já que nenhuma rede consegue atingir a velocidade de transferência dos barramentos internos de uma máquina</li>
+                    </ul>
+                <dd>Os sistemas distribuídos são enquadrados neste tipo, já que são compostos por várias máquinas, interligadas por uma rede de computadores, que trabalham em conjunto processando as requisições</dd>
+        </dl>
+
+    </br>
     </body>
 
 </html>
