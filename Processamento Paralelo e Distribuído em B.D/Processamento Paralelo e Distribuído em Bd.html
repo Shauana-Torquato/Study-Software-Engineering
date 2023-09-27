@@ -1,0 +1,40 @@
+Sistema de Banco de Dados Distribuidos
+    Prof Sidney Nicolau Venturi Filho
+
+
+    1- Distribuição em Sistemas Computacionais
+
+        A - Fundamentos de Sistema Distribuídos
+ 
+        O sistema distribuido é o tipo de sistema computacional aonde o processamento é realizado em mais de um local, ao mesmo tempo (paralelamente) ou sequencialmente.
+        para o usuário, independente de paralelo ou sequencial, será visto como um único sistema
+        O sistema distribuído, para poder funcionar, trabalha em camadas
+        O sistema distribuído é complexo, assim, é importante compreender este trabalho em camadas
+        Cada camada trata de um aspecto do sistema distribuído:
+            - A primeira camada (mais alta), é a camada de aplicativos e serviços
+                    essa camada trata, por exemplo, as interfaces dos programas, o que o usuário enxerga do sistema; serviços oferecidos pelo banco de dados (que é um aspecto da comunicação)
+            - A segunda camada é um middleware. O middleware é um software que vai fazer a interface entre o aplicativo e a plataforma. Para que o desenvolvolvimento seja feito de uma forma mais suave, sem se preocupar com um hardware especcífico, eu posso criar em uma máquina virtual (middleware)
+                    o Middleware vai fazer exatamente esta transição, vai fazer a tradução daquilo que foi desenvolvido de uma forma mais genárica pra um determinado hardware
+
+            * a plataforma é o sistema operacional, computador e hardware de rede
+
+            - A terceira camada é o Sistema Operacional
+            - Na quarta camada (camada mais baixa do sistema) se tem o hardware propriamente dito
+
+            * essas camadas são feitas de modo a ocultar da camada superior as particularidades da camada inferior
+
+                ---
+                "um sistema distribuído é um conjunto de computadores interligados via rede, mas para o usuário final das aplicações executadas através deles, aparenta ser um sistema único"
+               (TANEMBAUM;STEEN, 2008, n.p.) 
+                ---
+
+                    * a definição clarifica que apesar de cada um dos computadores envolvidos no sistema distribuído ter o seu funcionamento independente dos outros, podendo inclusive serem totalmente diferentes, eles parecem ser para os usuários um único sistema, integrado e coeso
+                    * para permitir essa ilusão, os diversos componentes precisam ser ligados por uma rede, que a partir de seus protocolos padronizados irá mascarar as diferenças de suas arquiteturasf
+
+        
+        B - Camadas de um Sistema Distribuídos
+
+        um sistema distribuído pode, de forma simplificada, ser dividido em quatro camadas:
+
+            - aplicativo ou serviço: o programa fornece o servço ou funcionalidade
+            - middleware: software 
