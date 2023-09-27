@@ -25,18 +25,21 @@
         <p>O sistema distribuído, para poder funcionar, trabalha em camadas</p>
         <p>O sistema distribuído é complexo, assim, é importante compreender este trabalho em camadas</p>
         <p>Cada camada trata de um aspecto do sistema distribuído:</p>
-            - A primeira camada (mais alta), é a camada de aplicativos e serviços
-                    essa camada trata, por exemplo, as interfaces dos programas, o que o usuário enxerga do sistema; serviços oferecidos pelo banco de dados (que é um aspecto da comunicação)
-            - A segunda camada é um middleware. O middleware é um software que vai fazer a interface entre o aplicativo e a plataforma. Para que o desenvolvolvimento seja feito de uma forma mais suave, sem se preocupar com um hardware especcífico, eu posso criar em uma máquina virtual (middleware)
-                    o Middleware vai fazer exatamente esta transição, vai fazer a tradução daquilo que foi desenvolvido de uma forma mais genárica pra um determinado hardware
+        <dl></br>
+            <dt>- A primeira camada (mais alta), é a camada de aplicativos e serviços</dt></br>
+                    <dd>Essa camada trata, por exemplo, as interfaces dos programas, o que o usuário enxerga do sistema; serviços oferecidos pelo banco de dados (que é um aspecto da comunicação)</dd></br>
+            <dt>- A segunda camada é um middleware.</dt> </br>
+                    <dd>O middleware é um software que vai fazer a interface entre o aplicativo e a plataforma.</dd> </br>
+                    <dd>Para que o desenvolvolvimento seja feito de uma forma mais suave, sem se preocupar com um hardware especcífico, eu posso criar em uma máquina virtual (middleware)</dd></br>
+                    <dd>o Middleware vai fazer exatamente esta transição, vai fazer a tradução daquilo que foi desenvolvido de uma forma mais genárica pra um determinado hardware</dd></br>
 
-            * a plataforma é o sistema operacional, computador e hardware de rede
+                <dd>* a plataforma é o sistema operacional, computador e hardware de rede</dd></br>
 
-            - A terceira camada é o Sistema Operacional
-            - Na quarta camada (camada mais baixa do sistema) se tem o hardware propriamente dito
+            <dt>- A terceira camada é o Sistema Operacional</dt></br>
+            <dt>- Na quarta camada (camada mais baixa do sistema) se tem o hardware propriamente dito</dt></br>
 
-            * essas camadas são feitas de modo a ocultar da camada superior as particularidades da camada inferior
-
+                <dd>* essas camadas são feitas de modo a ocultar da camada superior as particularidades da camada inferior</dd></br>
+        </dl></br>
                 ---
                 "um sistema distribuído é um conjunto de computadores interligados via rede, mas para o usuário final das aplicações executadas através deles, aparenta ser um sistema único"
                (TANEMBAUM;STEEN, 2008, n.p.) 
@@ -46,15 +49,15 @@
                     * para permitir essa ilusão, os diversos componentes precisam ser ligados por uma rede, que a partir de seus protocolos padronizados irá mascarar as diferenças de suas arquiteturasf
 
         
-        B - Camadas de um Sistema Distribuídos
-
-        um sistema distribuído pode, de forma simplificada, ser dividido em quatro camadas:
-
-            - aplicativo ou serviço: o programa fornece o servço ou funcionalidade
-            - middleware: software localizado entre o sistema operacional e os aplicativos cuja função é gerenciar os dados e comunicação entre as duas camadas, mascarando desta forma a heterogeinedidade da plataforma utilizada
-            - sistema operacional: software de gerenciamento de hardware da máquina hospedeira
-            - computador e hardware de redes : componentes eletrÇonicos que permitem o funcionamento do equippamento utilizado
-
+        <h3>B - Camadas de um Sistema Distribuídos </h3>
+</br>
+        <p>Um sistema distribuído pode, de forma simplificada, ser dividido em quatro camadas:</p></br>
+            <ol>
+            <li>Aplicativo ou serviço: o programa fornece o servço ou funcionalidade</li></br>
+            <li>Middleware: software localizado entre o sistema operacional e os aplicativos cuja função é gerenciar os dados e comunicação entre as duas camadas, mascarando desta forma a heterogeinedidade da plataforma utilizada</li></br>
+            <li>Sistema operacional: software de gerenciamento de hardware da máquina hospedeira</li></br>
+            <li>Computador e hardware de redes : componentes eletrÇonicos que permitem o funcionamento do equippamento utilizado</li></br>
+            </ol>
 </body>
 
 </html>

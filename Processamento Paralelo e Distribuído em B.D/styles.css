@@ -31,9 +31,25 @@ head {
     text-align: justify;
     style: "font-family:didot,garamond,candara;"
   }
+
+  dl {
+    color:rgb(90, 94, 109);
+    margin-left: 150px;
+    margin-right: 50px;
+    text-align: justify;
+    style: "font-family:didot,garamond,candara;"
+  }
+
+  ol {
+    color:rgb(90, 94, 109);
+    margin-left: 150px;
+    margin-right: 50px;
+    text-align: justify;
+    style: "font-family:didot,garamond,candara;"
+  }
   
   body {
-      background-color: lightblue;
+      background-color: rgb(214, 242, 252);
     }
   
   iframe {
