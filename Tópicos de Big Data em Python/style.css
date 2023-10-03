@@ -39,3 +39,19 @@ body {
 iframe {
   background-color: LightYellow;
   }
+
+dl {
+  color:rgb(90, 94, 109);
+  margin-left: 150px;
+  margin-right: 50px;
+  text-align: justify;
+  style: "font-family:didot,garamond,candara;"
+}
+
+ol {
+  color:rgb(90, 94, 109);
+  margin-left: 150px;
+  margin-right: 50px;
+  text-align: justify;
+  style: "font-family:didot,garamond,candara;"
+}
