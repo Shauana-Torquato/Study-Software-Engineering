@@ -56,6 +56,7 @@
 				os relatórios são uma organização dos dados com o objetivo de fazer resumos informativos e monitorar o desempenho de diferentes áreas da empresa. a análise consiste em explorar dados e relatórios para extrair informações que agreguem valor e que possam ser usadas para compreender melhor os negócios e aperfeiçoar seu desempenho
  			
 			Os 5 Vs do Big Data
+				Volume, velocidade, variedade, veracidade, valor
 
 				1 - Volume: 
 				esta característica está relacionada com a escala da geração e coleta de massas de dados. A percepção de grandes volumes de daods está relacionada com a tecnologia disponível em determinado momento. Quando nos referimos ao volume de uma aplicação de Bigdata, normalmente estamos tratando de petabytes
@@ -63,23 +64,56 @@
 				como dos dados são medidos?
 				  *obs potencia
 					- byte (B) = unidade de informação digital, também chamada de octeto, que consiste em uma sequencia de 8 bits - binary digits
-					- kilobyte (KB) = 1 KB = 2*10 B= 1024 bytes
-					- magabyte (MB) = 1 M = 210 KB = 220 B
-					- gigabyte (GB) = 1 GB = 210 MB= 21=20 KB = 230 B
+					- kilobyte (KB) = 1 KB = 2^10 B= 1024 bytes
+					- magabyte (MB) = 1 M = 2^10 KB = 2^20 B
+					- gigabyte (GB) = 1 GB = 2^10 MB= 2^20 KB = 2^30 B
 
-					- terabyte (TB) – 1 TB = 210 GB;
+					- terabyte (TB) – 1 TB = 2^10 GB;
 			
-					- petabyte (PB) – 1 PB = 210 TB;
+					- petabyte (PB) – 1 PB = 2^10 TB;
 
-					- exabyte (EB) – 1 EB = 210 PB;
+					- exabyte (EB) – 1 EB = 2^10 PB;
 
-					- zettabyte (ZB) – 1 ZB = 210 EB;
+					- zettabyte (ZB) – 1 ZB = 2^10 EB;
 
-					- yottabyte (YB) – 1 YB = 210 ZB
+					- yottabyte (YB) – 1 YB = 2^10 ZB
 
 				2 - Velocidadee:
 				característica que corresponde à:
 					- velocidade da geração de dados
 					- rapidez com que os dados são gerados e processados
+								problema clássico produtor vs consumidor, onde o consumidor representa o papel do analista que precisa fazer consultas rapidamente porém pode sofrer limitações de tempo de resposta do  produtor - ou seja, o sistema pode possuir um ritmo mais lento para dsiponibilizar os dados para consultas
+								um projeto de big data precisa equilibrar os tempos de consumo e geração de dados
+				velocidade remete 1 - a que taxa os dados são gerados e 2 - a que taxa devem ser processados
+
+				3 - Variedade:
+				um projeto de big data pode ter vários tipos de dados (audio, vídeo, página da web e texto, tabelas de bancos de dados tradicionais). Esses dados podem ser classificados como
+					- dados estruturados: são armazenados de maneira organizada efáceis de processar e analisar. normalmente são dados numéricos ou texto que podem ser armazenados em um banco de dados relacional e manipulados usando a linguagem SQL - Structured Query language
+					- dados não estruturados: não possuem uma estrutura pré definida- como exemplo temos as imagens e arquivos de audio- são armazenados em um banco de dados não relacional denominado noSQL - not only noSQL
+					- dados semiestruturados: mesclam as duas formas de dados anteriores. como exemplo, temos formatos XML - extended markup language e SON - java script object notatiom
+						* xml e json são arquivos que tem tags e essas tags servem para delimitar campos e esses campos trazem dados que são importantes - mas que não são obrigados a seguir o mesmo padrão
+
+				4 - Veracidade: 
+				esta característica está relacionada a qualidade dos dados. É a veracidae que nos dá o grau de confiança necessário para que se desempenhe o uso daquele dado em dada função com base na integridade e precisão dos dados.
+				um projeto de big dada precisa utilizar técnicas que façam limpeza dos dados e garantam a qualidade deles, para que possam ser consumidos pelo processo de análise
+
+				5 - valor
+				é a principal característica de um projeto big data, justificando todo o trabalho envolvido, qual seja a extração de valor dos dados
+				os ddos são a matéria-prima a ser utilizada, e portanto necessitam de diversas etapas de tratamento e gerenciamento para que possam ser consumidos pelo processo de análise, precisa ser lapidado, refinado, para ser utilizado
+				- remete-se a agregar valor ao negócio
+			
+			IoT e computação distribuída 
+
+				Componentes de IoT
+
+					A tecnologia de IoT consiste na voexistência colaborativa de quatro componentes, que são:
+
+						1 - Objetos físicos- coisas: são os componentes eletrônicos e sensores responsáveis pela coleta de dados e aplicação de ações. ex - termostatos
+						2- protocolos de comunicação : viabilizam a troca de dados via internet entre os objetos físicos e outros sistemas. ex - HTTP
+						3 - computação: faz o gerenciamento do ciclo de vida dos dados, desde a coleta  e o armazenamento até o processamento, ex - arduino coletando os dados dos sensores 
+						4 -  seviços: é quem provê a autenticação e gerenciamento dos dispositivos, além de oferecer a infraestrutura . ex -  serviços na nuvem 
+
+					
+
 </body>
 </html>
