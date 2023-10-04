@@ -29,7 +29,7 @@ head {
     margin-left: 100px;
     margin-right: 50px;
     text-align: justify;
-    style: "font-family:didot,garamond,candara;"
+    font-family: 'Eczar', serif;
   }
 
   dl {
