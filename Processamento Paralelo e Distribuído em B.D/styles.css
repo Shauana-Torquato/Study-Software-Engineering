@@ -4,6 +4,7 @@ head {
   }
   
   h1 {
+    font-family: 'Mooli', sans-serif;
     color: royalblue;
     text-align: center;
     
@@ -37,7 +38,7 @@ head {
     margin-left: 150px;
     margin-right: 50px;
     text-align: justify;
-    style: "font-family:didot,garamond,candara;"
+    font-family:"didot,garamond,candara;"
   }
 
   ol {
