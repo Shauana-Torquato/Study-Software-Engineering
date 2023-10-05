@@ -1,0 +1,103 @@
+Titulo da disciplina: desenvolvimento web em arquitetura MVC
+
+titulo do tema: implementação da arquitetura MVC
+
+professor: sérgio assunção monteiro
+
+título do módulo 1: compreendendo e utilizando o gerenciador de dependencias Maven
+
+	1 - Introdução ao gerenciador de dependencias da Maven
+
+		A - Aspectos básicos da Arquitetura MVC
+
+			O padrão de arquitetura MVC faz separação de uma aplicação em três compnentes principais: Modelo, Visão e Controlador
+
+			- Modelo: parte responsável pelo domínio de dados, ou seja, operações de recuperação e armazenamento de dados de um banco de dados, sendo a camada que faz o mapeamento das tabelas do banco de dados e de suas respectivas colunas, com classes que seráo gerencidas pela aplicação
+
+			- Visão: responsável pela interface do usuário com a aplicação
+
+			- controlador: trata da interação do usuário com o modelo, fazendo tratamento de dados, tais como conversoes, concultas e quaisquer procedimentos associados à manipulaçao lógica dos dados, de modo que a camada de visão receba esses resultados em um formato que possa ser exibido sem a necessidade de outras operações
+
+			O padrão MVC ajuda a segmentar as diferentes partes de uma aplicação em lógica de acesso a dados, lógica de negócios e lógica de interface de usuário, e nos dá ao mesmo tempo um mecanismo para realizar um acoplamento fraco entre esses elementos.
+				essas características são muito úteis para desenvolvimento de grandes projetos em equipe, cntudo o MVC é apenas uma arquitetura, sendo que par utilizar de talna prática, é necessário de ferrramentas para o processo, no caso de estudo aqui, é o MAVEV
+
+		B - O gerenciador de dependencias Maven
+
+		apache maven é uma ferramenta de automoção para construção e gerenciamento de projetos baseados em Java. dentre as aplicaçõoes:
+
+			- disponibilidade de muitas dependencias que podem ser adicionadas para o projeto
+			- padronização da configuração do projeto
+			- gerenciamento de dependencias com atualização automáticca
+			- compativel com versoes anteriores
+			- disponibilização de relatorio de erros 
+			- garantia so uso consistente em todos os projetos
+			- facilidade de integração do projeto com sistema de controle de versoes
+
+		C - conceitos basicos
+		o maven é formado pelos seguintes componentes 
+
+		- arquivos POM: são arquivos XML que contem informações sobre o projeto e informações de configuração, como dependencias, por exemplo, que são usadas pelo maven para construir o projeto
+
+		- depndencias e repositórios: as dependencias são bibliotecas externas necessárias para o projeto já os repositorios sao diretorios de arquivos JAR empacotados
+
+		- ciclos de vida, fases e metas: um ciclo de construção é uma sequencia de fases, sendo que uma fase consiste em uma sequencia de metas. cada fase ´responsável por uma tareda específica. algumas fases importantes no ciclo de vida da compilação padrao:
+			+ validate: verifica se todas as informações necessárias para a construção estao disponíveis
+			+ compile: compila o código fonte
+			+ test-compile:compila o codigo fonte do teste
+			+ test: esxecuta testes unitários
+			+ package: empacota o codigo fonte compilado nos formatos JAR ou WAR
+			+ integration test: executa testes de integração separadamente dos testes unitários
+			+ install:instala o pacote em um repositório local
+			+ deploy: copia o pacote para o repositório remoto
+
+		- as fases sao compostas por uma sequencia d metas. as principais metas são:
+
+			+ compiler: está vinculado à fase compile respinsável pela compilação
+			+ compiler: testCompile: está vinculado à fase test-compile
+			+ install:install: está vinculado à fase install
+			+ jar:jar e war:war: estão vinculados à faase package
+
+		- perfis
+		no arquivo POM, um perfil é definido pelas tags profile. o objetivo é construir perfis por meio de um conjunto de valores de configuração. por exemplo, pode construir um perfil para desenvolvimento e teste
+
+		- plugins
+		são usados para atingir perfis com objetivos específicos, por exemplo, podemos utilizar o plugin do apache tomcat para executa um container apache tomcar para desenvolvimento de aplicações web
+
+		- conceitos basicos do maven : artefato vs arquétipo
+			+ artefato: ´´e um recurso gerado ou usado por um projeto, como, por exemplo , arquivos JAR e WAR
+			+ arquétipo: é um padrão do qual todas as outras coisas do mesmo tipo são feitas
+
+	2 - Criação de um projeto Maven
+
+		A - Pré-requisitos de instalação
+		é necessáro ter o JSDK
+		a variável de sistema JAVA_HOME deve estar apontando para a instalação do JDK
+		
+		B- Download do Maven
+		apache-maven-3.8.4-bin.zip
+
+		C- Intalação
+		descompactar o arquivo e adicioná-lo à pasta bin com o comando mvn ao PATH:
+
+			- Renomear a pasta para “maven-3.8.4” e copiá-la para o endereço “C:\Program Files”.
+			- Criar a variável de ambiente “M2_HOME” e apontá-la para o endereço da pasta do Maven
+			-Apontar a variável de ambiente “PATH” para a pasta “bin” do Maven
+			- abrir um terminal de linha de comando e digitar:
+
+mvn -version
+
+		C- Criação de um projeto simples
+
+		- precisamos criar uma pasta na qual vamos conceber o projeto. No nosso caso, criamos a pasta “teste_maven”. O endereço completo é: C:\teste_maven
+
+		- no prompt, executar:
+
+			mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+			+ O comando que acabamos de executar é o arquétipo “generate”, que gera um projeto baseado no arquétipo “quickstart”. Na primeira vez que executamos o comando “mvn” ocorre um pouco de demora, pois o Maven está baixando os arquivos jars de plugin e outros arquivos para o repositório local.
+
+		- vamos explorar um pouco o projeto que acabamos de criar. Para isso, precisamos digitar na linha de comando:
+
+			+ tree /f
+
+		- a pasta src/main/java contém o código-fonte do projeto. Já a pasta src/test/java contém o código-fonte de teste e o arquivo pom.xml. O nosso próximo passo é analisar o arquivo pom.xml.

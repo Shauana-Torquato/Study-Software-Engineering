@@ -1,0 +1,70 @@
+Titulo da disciplina: desenvolvimento web em arquitetura MVC
+
+titulo do tema: Camada de Modelo- Mapeamento Objeto Relacional
+
+professor: sérgio assunção monteiro
+
+título do módulo 1: Criação das classes de modelo, suas associações e multiplicidades
+
+	1 - Criação de classes da camada de modelo
+
+		A - Aspectos básicos da arquitetura MVC
+		
+		muitas aplicações modernas interagem com sistemas gerenciadores de bancos de dados -SGBD-, realizam processamentos desses dados e exibem resultados em gráficos e relatórios. Então, podemos distinguir elementos estruturais distintos que não devem ser tratados da mesma forma
+
+		a MVC é uma arquitetura muito utilizada na prática para organizar os códigos de um sistema. a idéia básica é que cada seção do nosso código tem uma finalidade e, portante, precisa ser tratada de uma forma específica
+
+		uma parte do nosso código é responsável por realizar operações com o SGBD, outra parte deve focar em uma interação homem-máquina com qualidade, para que o usuário tenha uma boa experiência com a aplicação e, ainda, tem a parte do código que controlo como a nossa aplicação vai funcionar
+
+		a MVC ajuda a organizar as funções principais do código da nossa aplicação. A consequencia disso é que ganhamos com a melhoria da organização que facilita realizar manutenções, melhorias e otimizar o trabalho em equipe
+
+		B - Camadas da Arquitetura MVC
+
+		Modelo, Visão e Controle
+
+		Modelo: responsavel pela representação dos dados. A forma mais comum do seu uso é na cosntrução de classes cujos campos refletem a estrutura de tabelas de um banco de dados, além de representar as relações com outras tabelas e métodos básicos de interação com os dados no padrão get e set
+
+		Visão: o código dessa camada é composto por todas as funções necessárias para interagir com o usuário, ou seja, ela é responsável pela interface homem-máquina
+
+		Controle: o código dessa camada faz a conexão entre as camada Modelo e Visão, ou seja, é ela que implementa as regras de negócio do sistema
+
+		IMAGEM 1
+
+		Interações entre as camadas:
+
+			- a camada de controle fornece os dados processados para a camada de visão
+			- a camada de visão faz requisições para a camada de controle
+			- a camada de controle faz requisições para a camada modelo
+			- a camada modelo fornece os dados para a camada de controle 
+
+		Com essa divisão de camadas, a MVC nos ajuda a organizar a construção, manutenção e melhoria de um sistema
+
+	2 - Classes das camadas de modelo e de controle
+
+		A - Aspectos fundamentais das classes
+
+		uma classe faz a modelagem de entidade para o domínio de sistema
+		para modelar essas entidades em classes, precisamos descrever suas propriedades por meio de atributos e um conjunto de funções que manipularão essas propriedades
+
+		a classe é um conceito abstrat, ou seja, é um modelo para representação das entidades
+		para podermos operar com dados, precisamos utilizar objetos que são instâncias de classe
+			por meio de um objeto, podemos realizar operações de consulta e escrita dos atributos
+			conceito de classe é o conceito fundamental da programação orientada a objetos - POO
+
+			+ POO possui três propriedades principais
+
+				Encapsulamento: expõe para as demais classes do programa apenas os métodos. dessa forma, a complexidade de manipular os atributos fica restrita à própria classe. Isso significa que, na prática, quando um código precisar de alguma informação de um objeto, ele simplesmente vai obtê-lo através da chamada de um método
+
+				Herança: É capacidade de uma classe herdar as características de uma outra classe, normalmente chamada de classe-mãe. Essa propriedade é muito útil para generalizar comportamentos. Um exemplo clássico é das classes Pessoa Física e Pessoa Jurídica, que herdam as características
+
+				Polimorfismo: Significa que métodos de mesmo nome dentro de uma classes, ou relacionados por meio da herança, podem ter comportamentos distintos ependendo do contexto de operação. Essa propriedade é útil em muitos cenários, mas deve ser usada com muita cautela para não gerar confusão. Especialmente no processo de depuração de um programa, ela pode ser um grande desafio
+
+		B - Classes para mapeamento da entidades
+
+		a camada de modelo trata do mapeamento explícito das tabelas do banco de dados. a ideia basica dessas classes é de representar os campos de uma tabela através de atributos e utilizar métodos do tipo getter e setter com os seguintos objetivos:
+		
+			+ Getter: serve para realizar consultas. por exemplo, no caso de uma class livro com um atributo "título", teremos umm método "getTitulo()" que retorna o valor do atributo "titulo"
+
+			+ Setter: é aplicado para realizar operações de escrita. voltando ao exemplo da classe livro do intem anterior, teremos um método "setTituli(nome)" que vai atribuir o valor do parâmetro "nome" ao atributo "titulo" do livro 
+
+			essas classes normalmente sao bem simples. os pontos que exigem mais atenção sao os dos tipos dos atributos que devem ser compativeis com os tipos dos respectivos campos das tabelas do banco de dados
