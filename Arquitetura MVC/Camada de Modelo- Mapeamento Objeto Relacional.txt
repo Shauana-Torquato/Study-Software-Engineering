@@ -68,3 +68,43 @@ título do módulo 1: Criação das classes de modelo, suas associações e mult
 			+ Setter: é aplicado para realizar operações de escrita. voltando ao exemplo da classe livro do intem anterior, teremos um método "setTituli(nome)" que vai atribuir o valor do parâmetro "nome" ao atributo "titulo" do livro 
 
 			essas classes normalmente sao bem simples. os pontos que exigem mais atenção sao os dos tipos dos atributos que devem ser compativeis com os tipos dos respectivos campos das tabelas do banco de dados
+
+		C - Objetos de acesso aos dados (DAO)
+
+		as classes precisam ser manipuladas para que se realizem as operações no banco de dados. para tanto, utiliza-se o padrão chamado de objeto de acesso aos dados  - DAO - Data Acess Object
+
+		o objetivo do padrão DAO é isolar a camada de negócios da camada de persistência, ou seja, do banco de dados relacional, embora possa ser qualquer outro mecanismo de persistência. O padrão dao pode ser combinado com o mapeamento objeto-relacional mais conhecido como orm - object relational mapping
+
+		a orm é uma tecnica que faz a conversão de dados entre os bancos de dados relacionais e as linguagens orientadas a objetos, facilitando bastante o processo de contrução de uma solução, pois utiliza frameworks que já possuem métodos, os quais nos permitem fazer as operações CRUD - inserção, leitura, modificação e exclusão - sem entrar nos detalhes do SGBD
+
+			+ um importante framework do OEM é o Hibernate. Ele realiza as operações de persistÇencia no banco de dados, ou seja, as operações CRUD. É comum utilizarmos o hibernate com o JPA, que é uma camada usada para descrever interface para um framework ORM 
+
+	3 - Associações e multiplicidade das classes da camada de modelo
+
+		A - Associação
+
+		é um relacionamento entre duas classe separadas
+
+		podemos representá-la por uma linha entre essas classes com uma seta indicando a direção da navegação
+
+		FIGURA 2
+
+		B - Coctividade
+
+		corresponde ao tipo de associação entre duas classes:
+			+ um para um 
+			+ um para muitos
+			+ muitos para um 
+			+ muitos para muitos
+
+		a conectividade da associação entre duas classes depende dos símbolos de multiplicidade que sao utilizados na associação
+
+		- um para um: descreve uma relação exclusiva entre dois itens. exemplo: uma pessoa pode ter apenas um passaporte e um passaporte pertence apenas para uma pessoa
+
+		- um para muitos: um item pode se relacionar a diversos outros. Exemplo: um médico pode ter muitos pacientes
+
+		- muitos para um : muitos itens podem estar relacionados a apenas uma identidde. Exemplo: muitos livos fazem parte do acervo fisico de uma biblioteca e nao podem fayer parte do acervo fisico de outra biblioteca
+
+		- muitos para muitos: muitos itens podem se relacionar com muitos outros - exemplo: muitos professores tem muitos alunos e muitos alunos tem muitos proffessores
+
+		
