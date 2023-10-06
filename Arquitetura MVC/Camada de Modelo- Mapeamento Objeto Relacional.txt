@@ -107,4 +107,48 @@ título do módulo 1: Criação das classes de modelo, suas associações e mult
 
 		- muitos para muitos: muitos itens podem se relacionar com muitos outros - exemplo: muitos professores tem muitos alunos e muitos alunos tem muitos proffessores
 
-		
+		C - Multiplicidade
+
+		representam a informçãp dos limites inferior e duperior da quantidade de objetos aos quais outro objeto pode se associar
+
+			Nome				Simbologia na UML
+			Apenas Um			1..1 (ou 1)
+			Zero ou Muitos			0..* (ou *)
+			Um ou Muitos			1..*
+			Zero ou Um			0..1
+			Intervalo Específico		li..ls		
+
+
+título do módulo 2: Aplicação das Anotações JPA com hibernate
+
+	1 - Introdução para a JPA
+
+		A - Conceitos básicos da JPA
+
+		A JPA é uma especificação de linguagem de programção JAVA
+			Java Persistence API
+		O objetivo da JPA é fazer a persistencia de dados dos objetos implementados em JAVA com o banco de dados relacional.
+			JPA desempenha um papel que faz ligação entre os modelos de dominio orientados a objetos e os sitemas de banco de dados relacionais
+
+		---
+		a JPA é apenas uma especificação, logo, não realiza nenhuma operação de persistencia por si só, necessitando de outra aplicação para que uma operação de pesrisitencia seja feita. É aqui que entra as ferramentas de ORM como o Hibernate, que irá implementar as especificações JPA para a persistencia de dados
+		---
+
+		B - Arquitetura da ;jpa
+
+		a arquitetura JPa é formada por classes e interfaces utilizadas para fazer a persistência de entidades em um banco de dados, ou seja, fazer o armazenamento dos dados em tabelas. 
+		os principais componentes da arquitetura da JPA sao
+
+			+ EntityManagerFactory: fábrica de entidades gerenciadoras, sendo utilizado para criar e gerenciar várias instâncias do componente EntityManager
+
+			+ EntityManager: é a gerenciadora de entidades, gerenciando as operações de persistência em objetos e funciona como uma fábrica de instâncias do componente Query
+
+			+ Entity: este componente representa os objetos que serão aramzenados como registros no banco de dados
+
+			+ EntityTransaction: possui um relacionamento um-para0um com o entitymanager de forma que para cada entitymanager, as transações são mantidas pela classe entitytransaction
+
+			+ Persistence: este componente comtém métodos estáticos para obter a instência do componente EntityManagerFactory
+
+			+ Query: é uma interface que deve ser implementada por cada fornecedor JPA para obter objetos relacionais que satisfaçam critérios
+
+		Esses componentes nos ajudam a desenvolver códigos para que possamos focar no mapeamento das classes com tabelas de banco de dados
